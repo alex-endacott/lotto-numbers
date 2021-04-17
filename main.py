@@ -8,7 +8,9 @@ import inc.powerball as pb
 
 
 def main():
-    pb.get_prior_pb_winners_data()
+    pb_df = pb.import_prior_pb_winners_csv()
+    formatted_pb_df = pb.format_prior_pb_winners_data(pb_df)
+    print(formatted_pb_df)
 
 
 if __name__ == '__main__':
